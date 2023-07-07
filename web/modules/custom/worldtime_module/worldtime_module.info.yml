@@ -1,0 +1,4 @@
+name: World Time Module
+type: module
+description: A custom module to display world times using the WorldTimeAPI.
+core_version_requirement: ^8 || ^9

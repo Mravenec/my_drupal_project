@@ -1,0 +1,16 @@
+<table>
+  <thead>
+    <tr>
+      <th>City</th>
+      <th>Current Time</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for time in times %}
+      <tr>
+        <td>{{ time.city }}</td>
+        <td>{{ time.time }}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>

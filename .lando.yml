@@ -1,0 +1,29 @@
+name: my_project
+recipe: drupal9
+config:
+  php: '8.1'
+  via: apache
+  webroot: web
+  database: postgres:14
+  xdebug: true
+services:
+  appserver:
+    type: php:8.1
+    build_as_root:
+      - apt-get update -y
+    build:
+      - composer install
+    overrides:
+      environment:
+        PHP_EXTENSIONS: mysqli pdo_pgsql
+  database:
+    type: postgres:14
+    portforward: true
+    creds:
+      user: root
+      password: P@ssw0rd2023!
+      database: prueba
+tooling:
+  drush: 
+    service: appserver
+    cmd: vendor/bin/drush

@@ -1,0 +1,7 @@
+worldtime_module.content:
+  path: '/worldtime'
+  defaults:
+    _controller: 'Drupal\worldtime_module\Controller\WorldTimeController::content'
+    _title: 'World Time'
+  requirements:
+    _permission: 'access content'
